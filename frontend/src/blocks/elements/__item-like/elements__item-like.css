@@ -1,0 +1,14 @@
+.elements__item-like {
+  width: 23px;
+  height: 19px;
+  margin: 0 5px 3px;
+  background: url(../../../images/heart_img.svg) no-repeat center;
+  padding: 0;
+  border: 0;
+  cursor: pointer;
+  transition: 0.4s ease-in;
+}
+
+.elements__item-like:hover {
+  opacity: 0.5;
+}

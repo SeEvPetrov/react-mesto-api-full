@@ -1,0 +1,12 @@
+.popup__container_type_auth {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 60px 36px;
+}
+
+@media (max-width: 720px) {
+  .popup__container_type_auth {
+    padding: 50px 38px;
+  }
+}
