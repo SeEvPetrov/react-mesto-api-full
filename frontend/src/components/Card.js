@@ -24,7 +24,9 @@ const Card = ({
 
   // Создаем класс для кнопки удаления
   const isOwn = card.owner === currentUser._id;
-  const cardDeleteButtonClassName = `${isOwn ? "elements__item-delete" : ""}`;
+  const cardDeleteButtonClassName = `elements__item-delete" ${
+    isOwn ? '' : 'elements__item-delete_hidden'
+  }`;
 
   // создаем класс для кнопки лайка
   const isLiked = card.likes.some((i) => i === currentUser._id);
