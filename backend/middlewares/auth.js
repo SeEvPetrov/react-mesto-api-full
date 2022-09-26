@@ -1,5 +1,5 @@
 const jwt = require('jsonwebtoken');
-const { SECRET_KEY } = require('../utils/config');
+const { JWT_SECRET } = require('../utils/config');
 const { AuthorizationError } = require('../errors/index');
 
 const auth = (req, res, next) => {
@@ -12,7 +12,7 @@ const auth = (req, res, next) => {
   let payload;
 
   try {
-    payload = jwt.verify(token, SECRET_KEY);
+    payload = jwt.verify(token, JWT_SECRET);
   } catch (err) {
     next(new AuthorizationError('Авторизуйтесь'));
     return;

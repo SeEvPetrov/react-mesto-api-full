@@ -1,7 +1,7 @@
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const User = require('../models/user');
-const { SECRET_KEY, HASH_LENGTH } = require('../utils/config');
+const { JWT_SECRET, HASH_LENGTH } = require('../utils/config');
 const {
   ErrorNotFound,
   AuthorizationError,
@@ -116,7 +116,7 @@ const login = async (req, res, next) => {
       {
         _id: user._id,
       },
-      SECRET_KEY,
+      JWT_SECRET,
       {
         expiresIn: '7d',
       },
