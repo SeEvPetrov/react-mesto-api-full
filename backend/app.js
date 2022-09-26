@@ -3,13 +3,13 @@ require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
 const mongoose = require('mongoose');
-const helmet = require('helmet');
-const { errors } = require('celebrate');
-
 const cookieParser = require('cookie-parser');
+const { errors } = require('celebrate');
+const helmet = require('helmet');
+const { DATABASE_URL, PORT } = require('./utils/config');
+
 const { requestLogger, errorLogger } = require('./middlewares/logger');
 
-const { PORT = 3000 } = process.env;
 const app = express();
 const { routes } = require('./routes');
 const { errorhandler } = require('./middlewares/errorHandler');
@@ -29,7 +29,7 @@ app.use(errorhandler);
 
 async function main() {
   try {
-    await mongoose.connect('mongodb://localhost:27017/mestodb', {
+    await mongoose.connect(DATABASE_URL, {
       useNewUrlParser: true,
       useUnifiedTopology: false,
     });

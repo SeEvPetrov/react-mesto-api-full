@@ -1,7 +1,7 @@
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const User = require('../models/user');
-const { JWT_SECRET, HASH_LENGTH } = require('../utils/config');
+const { JWT_SECRET, SALT_LENGTH } = require('../utils/config');
 const {
   ErrorNotFound,
   AuthorizationError,
@@ -14,7 +14,7 @@ const createUser = async (req, res, next) => {
   } = req.body;
 
   try {
-    const passwordHash = await bcrypt.hash(password, HASH_LENGTH);
+    const passwordHash = await bcrypt.hash(password, SALT_LENGTH);
     const user = await User.create({
       name,
       about,

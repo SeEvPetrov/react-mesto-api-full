@@ -24,7 +24,7 @@ const Card = ({
 
   // Создаем класс для кнопки удаления
   const isOwn = card.owner === currentUser._id;
-  const cardDeleteButtonClassName = `elements__item-delete" ${
+  const cardDeleteButtonClassName = `elements__item-delete ${
     isOwn ? '' : 'elements__item-delete_hidden'
   }`;
 
@@ -43,7 +43,7 @@ const Card = ({
         onClick={handleClick}
       />
       <button
-        type="button"
+        // type="button"
         className={cardDeleteButtonClassName}
         onClick={handleDeleteClick}
       ></button>
