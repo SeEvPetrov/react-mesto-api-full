@@ -8,8 +8,8 @@
 
 ## Ссылки на проект
 
-IP-адрес x.x.x.x
+IP-адрес 178.154.205.161
 
-Frontend https://...
+Frontend https://mesto.petrov.nomorepartiesxyz.ru
 
-Backend https://...
+Backend https://api.mesto.petrov.nomorepartiesxyz.ru
