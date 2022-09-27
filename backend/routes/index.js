@@ -8,6 +8,12 @@ const auth = require('../middlewares/auth');
 const { login, createUser } = require('../controllers/users');
 const { ErrorNotFound } = require('../errors/index');
 
+routes.get('/crash-test', () => {
+  setTimeout(() => {
+    throw new Error('Сервер сейчас упадёт');
+  }, 0);
+});
+
 routes.post(
   '/signup',
   express.json(),
