@@ -8,7 +8,7 @@
 
 ## Ссылки на проект
 
-IP-адрес 178.154.205.161
+IP-адрес <178.154.205.161>
 
 Frontend https://mesto.petrov.nomorepartiesxyz.ru
 
@@ -44,7 +44,7 @@ Backend https://api.mesto.petrov.nomorepartiesxyz.ru
 ### Инструкция по разрёртыванию проекта:
 ```bash
 # клонирование репозитория
-$ git clone https://github.com/goldlexx/react-mesto-api-full.git
+$ git clone https://github.com/SeEvPetrov/react-mesto-api-full.git
 
 # установка зависимостей
 $ npm install
