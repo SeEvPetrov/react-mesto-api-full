@@ -6,7 +6,9 @@ const mongoose = require('mongoose');
 const cookieParser = require('cookie-parser');
 const { errors } = require('celebrate');
 const helmet = require('helmet');
-const { DATABASE_URL, PORT } = require('./utils/config');
+
+const { PORT = 3000 } = process.env;
+const { DATABASE_URL } = require('./utils/config');
 
 const { requestLogger, errorLogger } = require('./middlewares/logger');
 
